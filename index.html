@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Number guessing game</title>
 </head>
 <body>
@@ -13,23 +14,22 @@
     </p>
     <div class="form">
         <label for="inputField">Enter a guess:</label>
-        <input type="number" min="1" max="100" id="inputField" class="inputField">
-        
+        <input type="number" min="1" max="100" id="input" class="input">
+        <button type="button" id="button">Submit</button>
     </div>
     <div class="results">
-        <div class="guesses">
+        <div id="guesses">
 
         </div>
-        <div class="lastResult">
+        <div id="lastResult">
 
         </div>
-        <div class="lowOrHi">
+        <div id="lowOrHi">
 
         </div>
     </div>
     
     <!--
-        3. the player inputs a number
         4. the system prints the number, recording it 
         5. the system checks whether the input is correct
         6. if the input number is correct:
