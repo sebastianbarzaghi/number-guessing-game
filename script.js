@@ -25,10 +25,20 @@ button.addEventListener("click", function() {
 
 function checkInput(solution, input) {
     if (solution == input) {
-        const success = document.createTextNode("Congratulations! You got it right!");
-        lastResult.appendChild(success);
-        lastResult.classList.toggle("success");
+        appendSuccess()
     } else {
-        console.log("wrong")
+        appendFailure()        
     }
+}
+
+function appendSuccess() {
+    const success = "Congratulations! You got it right!";
+    lastResult.innerHTML = success;
+    lastResult.classList.toggle("success");
+}
+
+function appendFailure() {
+    const failure = "Wrong! Try again!";
+    lastResult.innerHTML= failure;
+    lastResult.classList.toggle("wrong");
 }
