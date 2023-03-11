@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Number guessing game</title>
 </head>
 <body>
@@ -17,7 +16,7 @@
         <input type="number" min="1" max="100" id="input" class="input">
         <button type="button" id="button">Submit</button>
     </div>
-    <div class="results">
+    <div id="results">
         <p id="turns">
         </p>
         <p id="guesses">
@@ -29,29 +28,6 @@
     </div>
     <div id="newGame">
     </div>
-    
-    <!--
-        4. the system prints the number, recording it 
-        5. the system checks whether the input is correct
-        6. if the input number is correct:
-            6.1 the system displays a message
-            6.2 the system blocks the user from entering new input
-            6.3 the system gives the player the option to play again
-            6.4 once it restarts, the system needs to be completely reset
-        7. if the input number is incorrect:
-            7.1 if the input number is lower than the solution:
-                7.1.1 the system displays a message
-                7.1.2 the system  allows the user to enter new input
-            7.2 if the input number is higher than the solution:
-                7.2.1 the system displays a message
-                7.2.2 the system  allows the user to enter new input
-            7.3 if the player doesn't have turns left:
-                7.3.1 the systems displays a message
-                7.3.2 the system blocks the user from entering new input
-                7.3.3 the system gives the player the option to play again
-                7.3.4 once it restarts, the system needs to be completely reset
-
-    -->
     <script src="script.js"></script>
 </body>
 </html>

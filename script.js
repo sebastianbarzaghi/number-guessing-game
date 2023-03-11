@@ -3,6 +3,7 @@ let turn = 1;
 
 const turns = document.getElementById("turns");
 const guesses = document.getElementById("guesses");
+guesses.innerHTML = "Guesses: "
 const lastResult = document.getElementById("lastResult");
 const suggestion = document.getElementById("suggestion");
 
@@ -15,14 +16,14 @@ resetButton.innerText = "Start new game";
 
 const form = document.getElementById("form");
 
+const results = document.getElementById("results");
+results.style.display = "none"
+
 
 button.addEventListener("click", function() {
+    results.style.display = "block"
     const inputNumber = input.value;
-    const span = document.createElement("span");
-    const guess = document.createTextNode(inputNumber);
-    
-    span.appendChild(guess);
-    guesses.appendChild(span);
+    guesses.innerHTML += `${inputNumber} `;
 
     checkInput(randomNumber, inputNumber)
 
@@ -55,13 +56,14 @@ function checkInput(solution, input) {
 function appendSuccess() {
     const success = "Congratulations! You got it right!";
     lastResult.innerHTML = success;
-    lastResult.classList.toggle("success");
+    lastResult.style.backgroundColor = "green";
+    lastResult.style.color = "white";
 }
 
 function appendFailure() {
     const failure = "Wrong! Try again!";
     lastResult.innerHTML= failure;
-    lastResult.classList.toggle("wrong");
+    lastResult.style.backgroundColor = "red";
 }
 
 function endGame() {
@@ -73,7 +75,7 @@ function endGame() {
 
 function resetGame() {
 
-    const resetResults = document.querySelectorAll(".results p");
+    const resetResults = document.querySelectorAll("#results p");
     for (const resetResult of resetResults) {
         resetResult.innerText = "";
     }
